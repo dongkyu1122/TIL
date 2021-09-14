@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>method</h1>
+  <script>
+    var groups = {
+      friend: 'youngwook',
+      broder: 'kangmin',
+      sister: 'hanul',
+    }
+    document.write('친구는 : ' + groups.friend + '<br>')
+    document.write('형은 : ' + groups.broder + '<br>')
+    document.write('동생은 : ' + groups.sister + '<br>')
+  </script>   
+  <h2>property & method</h2>
+  <script>
+    groups.showAl = function() {
+      for(var key in groups) { 
+          document.write(key+ ' : ' + this[key]+ '<br>')
+      }
+    }
+    groups.showAl()
+  </script>
+</body>
+</html>
