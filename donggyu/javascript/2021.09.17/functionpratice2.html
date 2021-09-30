@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  function login() {
+    var id = document.form.id.value.length
+    var pass = document.form.pass.value.length
+    if(id === 0) {
+      alert('아이디값을 입력해주세요')
+    } else if(id < 5) {
+      alert('아이디값은 5보다 많이해주세요')
+    } else if(pass === 0) {
+      alert('비밀번호값을 입력해주세요')
+    } else if(pass < 5) {
+      alert('비밀번호값은 5보다 많이해주세요')
+    } else {
+      alert('로그인성공 해당페이지로 이동합니다')
+      location.href='https://www.naver.com'
+    }
+  }
+</script>
+<body>
+  <h1>한번더 로그인</h1>
+  <form name="form">
+  <input type="text" name="id" placeholder="id">
+  <input type="password" name="pass" placeholder="password">
+  <input type="button" value="로그인" onclick="login()"/>
+</form>
+</body>
+</html>
