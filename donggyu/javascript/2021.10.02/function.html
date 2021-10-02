@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<script>
+  function nightDayHandler(self) {
+    var body = {
+        setBackgroundColor : function(color) {
+          document.querySelector('body').style.backgroundColor=color
+        },
+        setColor : function(color) {
+          document.querySelector('body').style.color=color
+        } 
+      }
+      var Link = {
+        setColor : function(color) {
+          var alist = document.querySelectorAll('a')
+          var i = 0
+          while(i < alist.length) {
+            alist[i].style.color=color
+            i = i + 1
+          } 
+        }
+      }
+    if(self.value === 'night') {
+      body.setBackgroundColor('black')
+      body.setColor('white')
+      Link.setColor('powderblue')
+      self.value = 'day'
+    } else {
+      body.setBackgroundColor('white')
+      body.setColor('black')
+      Link.setColor('red')
+      self.value = 'night'
+    }
+  }
+</script>
+<body>
+  <h1>연습장</h1>
+  <input type="button" value="night" onclick="nightDayHandler(this)">
+  <div><a href="#">html</a></div>
+  <div><a href="#">css</a></div>
+  <div><a href="#">javascript</a></div>
+</body>
+</html>
